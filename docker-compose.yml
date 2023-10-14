@@ -28,6 +28,8 @@ services:
       - pgdata:/var/lib/postgresql/data
   proxy:
     build: proxy
+    networks:
+      - mynetwork
     ports:
       - 8080:80
     depends_on: 
