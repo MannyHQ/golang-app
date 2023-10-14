@@ -31,7 +31,7 @@ services:
     #networks:
      # - mynetwork
     ports:
-      - 7575:80
+      - 80:80
     depends_on: 
       - go-app
 
