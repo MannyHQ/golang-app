@@ -8,7 +8,7 @@ services:
     networks:
       - mynetwork
     environment:
-      DATABASE_URL: "postgresql://1180880:1180880@go_db:5432/manuel?sslmode=disable" #host=go_db user=postgres password=postgres dbname=postgres sslmode=disable"
+      DATABASE_URL: "postgresql://postgres:postgres@go_db:5432/manuel?sslmode=disable" #host=go_db user=postgres password=postgres dbname=postgres sslmode=disable"
     ports:
       - "8000:8000"
     depends_on:
@@ -19,8 +19,8 @@ services:
       - mynetwork
     image: postgres:16
     environment:
-      POSTGRES_PASSWORD: 1180880
-      POSTGRES_USER: 1180880
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
       POSTGRES_DB: manuel
     ports:
       - "5435:5435"
